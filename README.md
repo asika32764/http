@@ -7,7 +7,7 @@
 
 This package provides PSR7 standard Http message objects, Uri objects, Stream objects and Client request object.
 
-Part of this package is based on [phly/http](https://github.com/phly/http)
+Some parts of this package based on [phly/http](https://github.com/phly/http)
 
 ## Installation via Composer
 
@@ -287,7 +287,7 @@ $stream->getContents(); // get: Foo Bar
 Read data from `php://input`
 
 ``` php
-$stream = new PgpInputSteam;
+$stream = new PhpInputSteam;
 
 $data = $stream->__toString(); // foo=bar
 
