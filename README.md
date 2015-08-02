@@ -331,6 +331,27 @@ See: [Psr7 StreamInterface](https://github.com/php-fig/fig-standards/blob/master
 
 A Request object to store server data, like: `$_SERVER`, `$_COOKIE`, `$_REQUEST` etc.
 
+### `UploadedFile`
+
+An object to store uploaded files, see: [Uploaded files interface](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-7-http-message.md#16-uploaded-files)
+
+``` php
+$files = array();
+
+foreach ($_FILE as $name => $file)
+{
+    $files[$name] = new UploadedFile($file['tmp_name'], $file['size'], $file['error'], $file['name'], $file['type']);
+}
+
+$request = new ServerRequest(
+  $_SERVER,
+  $_GET,
+  $_POST,
+  $_COOKIE,
+  $files
+);
+```
+
 ## More About Psr 7
 
 [PSR7 HTTP message interfaces](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-7-http-message.md) / 
