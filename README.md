@@ -1,4 +1,4 @@
-# The PSR7 Http Implementation
+# The PSR7 Http Implementation   [![Analytics](https://ga-beacon.appspot.com/UA-48372917-1/http/readme)](https://github.com/igrigorik/ga-beacon)
 
 [![Latest Stable Version](https://poser.pugx.org/asika/http/v/stable)](https://packagist.org/packages/asika/http) 
 [![Total Downloads](https://poser.pugx.org/asika/http/downloads)](https://packagist.org/packages/asika/http) 
