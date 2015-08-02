@@ -1,9 +1,8 @@
 {
-    "name": "windwalker/http",
-    "type": "windwalker-package",
+    "name": "asika/http",
     "description": "Windwalker Http package",
-    "keywords": ["windwalker", "framework", "http"],
-    "homepage": "https://github.com/ventoviro/windwalker-http",
+    "keywords": ["asika", "psr7", "uri", "http", "request", "response", "client", "restful", "stream"],
+    "homepage": "https://github.com/asika32764/asika-http",
     "license": "LGPL-2.0+",
     "require": {
         "php": ">=5.3.10",
@@ -12,7 +11,7 @@
     },
     "require-dev": {
         "windwalker/environment": "~2.0",
-        "windwalker/test": "dev-master"
+        "windwalker/test": "~2.0"
     },
     "minimum-stability": "beta",
     "autoload": {
@@ -20,5 +19,8 @@
             "Asika\\Http\\": "src",
             "Asika\\Http\\Test\\": "test"
         }
+    },
+    "provide": {
+        "psr/http-message-implementation": "~1.0"
     }
 }
