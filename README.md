@@ -287,7 +287,7 @@ $stream->getContents(); // get: Foo Bar
 Read data from `php://input`
 
 ``` php
-$stream = new PgpInputSteam;
+$stream = new PhpInputSteam;
 
 $data = $stream->__toString(); // foo=bar
 
