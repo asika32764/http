@@ -1,6 +1,6 @@
 {
     "name": "asika/http",
-    "description": "Windwalker Http package",
+    "description": "PSR HTTP Message implementations",
     "keywords": ["asika", "psr7", "uri", "http", "request", "response", "client", "restful", "stream"],
     "homepage": "https://github.com/asika32764/asika-http",
     "license": "LGPL-2.0+",
