@@ -123,6 +123,42 @@ $response = $http->send($request);
 $response->getStatusCode(); // 200 is OK
 ```
 
+### Custom Transports and Options
+
+Now support Curl and Steam 2 transports.
+
+``` php
+use Asika\Http\Transport\CurlTransport;
+
+$options = array(
+    'certpath' => '/custom/cert.pem'
+);
+
+$transport = new CurlTransport($options);
+
+// Set transport when client new
+$http = new HttpClient(array(), $transport);
+```
+
+Set custom CURL options:
+
+``` php
+$options = array(
+    'options' => array(
+        CURLOPT_SSL_VERIFYHOST => false,
+        CURLOPT_SSL_VERIFYPEER => true
+    )
+);
+
+$httpOptions = array(
+    'header' => array(
+        'X-Foo' => 'Bar'
+    )
+);
+
+$http = new HttpClient($httpOptions, new CurlTransport($options));
+```
+
 ### Download Remote File
  
 ``` php
