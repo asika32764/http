@@ -6,7 +6,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/asika/http/v/unstable)](https://packagist.org/packages/asika/http) 
 [![License](https://poser.pugx.org/asika/http/license)](https://packagist.org/packages/asika/http)
 
-This package provides PSR7 standard Http message objects, Uri objects, Stream objects and Client request object.
+This package provides PSR7 standard Http message objects, Uri objects, Stream objects and Client request object. **(PHP 5.3 Compatible)**
 
 It is port from [Windwalker 2.1 dev](https://github.com/ventoviro/windwalker/tree/2.1/src/Http)
 
