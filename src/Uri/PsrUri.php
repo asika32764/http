@@ -44,6 +44,24 @@ class PsrUri extends AbstractUri implements PsrUriInterface
 	);
 
 	/**
+	 * Constructor.
+	 * You can pass a URI string to the constructor to initialise a specific URI.
+	 *
+	 * @param   string  $uri  The optional URI string
+	 *
+	 * @since   2.0
+	 */
+	public function __construct($uri = '')
+	{
+		if (!is_string($uri))
+		{
+			throw new \InvalidArgumentException('URI should be a string');
+		}
+
+		parent::__construct($uri);
+	}
+
+	/**
 	 * Retrieve the authority component of the URI.
 	 *
 	 * If no authority information is present, this method MUST return an empty
@@ -222,9 +240,9 @@ class PsrUri extends AbstractUri implements PsrUriInterface
 	 */
 	public function withPath($path)
 	{
-		if (is_array($path) || (is_object($path) && !is_callable($path, '__toString')))
+		if (!is_string($path))
 		{
-			throw new \InvalidArgumentException('Invalid path type.');
+			throw new \InvalidArgumentException('URI Path should be a string');
 		}
 
 		$path = (string) $path;
@@ -261,9 +279,9 @@ class PsrUri extends AbstractUri implements PsrUriInterface
 	 */
 	public function withQuery($query)
 	{
-		if (is_array($query))
+		if (!is_string($query))
 		{
-			$query = UriHelper::buildQuery($query);
+			throw new \InvalidArgumentException('URI query should be a string or array');
 		}
 
 		$query = UriHelper::filterQuery($query);
