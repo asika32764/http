@@ -154,7 +154,7 @@ $options = array(
 );
 
 $httpOptions = array(
-    'header' => array(
+    'headers' => array(
         'X-Foo' => 'Bar'
     )
 );
