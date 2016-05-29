@@ -77,4 +77,20 @@ class RequestTest extends \PHPUnit_Framework_TestCase
 
 		$this->assertEquals(array('windwalker.io'), $request->getHeader('host'));
 	}
+
+	/**
+	 * Method to test hasHeader().
+	 *
+	 * @return  void
+	 *
+	 * @covers Asika\Http\Request::hasHeader
+	 */
+	public function testHasHeader()
+	{
+		$request = new \Asika\Http\Request('http://example.com/foo', 'GET');
+
+		$this->assertTrue($request->hasHeader('host'));
+		$this->assertTrue($request->hasHeader('Host'));
+		$this->assertFalse($request->hasHeader('X-Foo'));
+	}
 }
