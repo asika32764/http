@@ -141,6 +141,7 @@ class AbstractMessageTest extends \PHPUnit_Framework_TestCase
 
 		$this->assertEquals('Foo,Bar', $message->getHeaderLine('X-Foo'));
 		$this->assertEquals('Foo,Bar', $message->getHeaderLine('x-foo'));
+		$this->assertSame('', $message->getHeaderLine('x-bar'));
 	}
 
 	/**

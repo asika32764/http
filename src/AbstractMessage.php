@@ -178,7 +178,7 @@ abstract class AbstractMessage implements MessageInterface
 
 		if (!$value)
 		{
-			return null;
+			return '';
 		}
 
 		return implode(',', $value);
