@@ -8,9 +8,9 @@
 
 This package provides PSR7 standard Http message objects, Uri objects, Stream objects and Client request object. **(PHP 5.3 Compatible)**
 
-It is port from [Windwalker 2.1 dev](https://github.com/ventoviro/windwalker/tree/2.1/src/Http)
-
 > Some parts of this package based on [phly/http](https://github.com/phly/http) and [joomla/http](https://github.com/joomla-framework/http)
+
+**Project deprecated, please see [windwalker/http](https://github.com/ventoviro/windwalker-http)**
 
 ## Installation via Composer
 
