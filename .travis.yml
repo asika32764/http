@@ -3,17 +3,19 @@ language: php
 sudo: true
 
 php:
-  - hhvm
   - 5.3
   - 5.4
   - 5.5
   - 5.6
   - 7.0
+  - 7.1
+  - 7.2
 
 matrix:
   allow_failures:
     - php: 7.0
-    - php: hhvm
+    - php: 7.1
+    - php: 7.2
 
 before_install:
   - composer self-update
